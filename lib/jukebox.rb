@@ -55,18 +55,25 @@ end
 
 def run(songs)
   help
+  command = "" 
+  while command  
   puts "Please enter a command:"
-  users_response = gets.strip
-  unless users_response == "exit"
-    if users_response == "list"
+  command = gets.downcase.strip  
+  case command 
+    when 'list'
       list(songs)
-    elsif users_response == "play"
-      play(songs)
-    elsif users_response == "help"
-      help
-    else 
-      puts "I'm sorry, this is not a valid command. Please one of the following commands: list, play, help, or exit."
-    end
-  end
-  exit_jukebox
-end
+      when 'play'
+        list(songs)
+        play(songs)
+      when 'help'
+        help 
+      when 'exit'
+        exit_jukebox
+        break 
+      else 
+        help 
+      end 
+    end 
+  end 
+
+run(songs)
