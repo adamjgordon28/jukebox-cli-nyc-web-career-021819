@@ -55,11 +55,11 @@ end
 
 def run(songs)
   help
-  user_response = "" 
-  while command  
+  users_response = "" 
+  while users_response 
   puts "Please enter a command:"
-  command = gets.downcase.strip  
-  case command 
+  users_response = gets.downcase.strip  
+  case  
     when 'list'
       list(songs)
       when 'play'
