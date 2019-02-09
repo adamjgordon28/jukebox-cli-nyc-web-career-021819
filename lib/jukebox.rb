@@ -60,10 +60,16 @@ def run(songs)
   unless users_response == "exit"
     if users_response == "list"
       list(songs)
+      puts "Please enter a command:"
+      users_response = gets.strip
     elsif users_response == "play"
       play(songs)
+      puts "Please enter a command:"
+      users_response = gets.strip
     elsif users_response == "help"
       help
+      puts "Please enter a command:"
+      users_response = gets.strip
     else 
       puts "I'm sorry, this is not a valid command. Please one of the following commands: list, play, help, or exit."
     end
