@@ -58,7 +58,7 @@ def run(songs)
   command = "" 
   while command  
   puts "Please enter a command:"
-  command = gets.downcase.strip  
+  command = gets.strip  
   case command 
     when 'list'
       list(songs)
